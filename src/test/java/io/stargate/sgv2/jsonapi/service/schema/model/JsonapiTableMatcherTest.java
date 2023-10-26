@@ -26,7 +26,7 @@ class JsonapiTableMatcherTest {
                       .setName("key")
                       .setType(
                           QueryOuterClass.TypeSpec.newBuilder()
-                              .setBasic(QueryOuterClass.TypeSpec.Basic.VARCHAR)
+                              .setBasic(QueryOuterClass.TypeSpec.Basic.INT)
                               .build())
                       .build())
               .build();
@@ -112,16 +112,8 @@ class JsonapiTableMatcherTest {
                   .setName("key")
                   .setType(
                       QueryOuterClass.TypeSpec.newBuilder()
-                          .setTuple(
-                              QueryOuterClass.TypeSpec.Tuple.newBuilder()
-                                  .addElements(
-                                      QueryOuterClass.TypeSpec.newBuilder()
-                                          .setBasic(QueryOuterClass.TypeSpec.Basic.TINYINT))
-                                  .addElements(
-                                      QueryOuterClass.TypeSpec.newBuilder()
-                                          .setBasic(QueryOuterClass.TypeSpec.Basic.VARCHAR)
-                                          .build())
-                                  .build()))
+                          .setBasic(QueryOuterClass.TypeSpec.Basic.VARCHAR)
+                          .build())
                   .build());
     }
 
