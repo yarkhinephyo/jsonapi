@@ -83,7 +83,7 @@ public class SerialConsistencyOverrideOperationTest extends AbstractValidatingSt
                   List.of(
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("key")
-                          .setType(TypeSpecs.tuple(TypeSpecs.TINYINT, TypeSpecs.VARCHAR))
+                          .setType(TypeSpecs.VARCHAR)
                           .build(),
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("tx_id")
@@ -255,7 +255,7 @@ public class SerialConsistencyOverrideOperationTest extends AbstractValidatingSt
                   List.of(
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("key")
-                          .setType(TypeSpecs.tuple(TypeSpecs.TINYINT, TypeSpecs.VARCHAR))
+                          .setType(TypeSpecs.VARCHAR)
                           .build(),
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("tx_id")

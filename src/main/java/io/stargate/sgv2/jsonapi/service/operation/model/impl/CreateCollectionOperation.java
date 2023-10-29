@@ -153,7 +153,7 @@ public record CreateCollectionOperation(
     if (vectorSearch) {
       String createTableWithVector =
           "CREATE TABLE IF NOT EXISTS \"%s\".\"%s\" ("
-              + "    key                 tuple<tinyint,text>,"
+              + "    key                 text,"
               + "    tx_id               timeuuid, "
               + "    doc_json            text,"
               + "    exist_keys          set<text>,"
@@ -177,7 +177,7 @@ public record CreateCollectionOperation(
     } else {
       String createTable =
           "CREATE TABLE IF NOT EXISTS \"%s\".\"%s\" ("
-              + "    key                 tuple<tinyint,text>,"
+              + "    key                 text,"
               + "    tx_id               timeuuid, "
               + "    doc_json            text,"
               + "    exist_keys          set<text>,"

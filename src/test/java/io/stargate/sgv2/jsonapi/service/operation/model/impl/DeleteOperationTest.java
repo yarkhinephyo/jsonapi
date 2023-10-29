@@ -65,7 +65,7 @@ public class DeleteOperationTest extends AbstractValidatingStargateBridgeTest {
                   List.of(
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("key")
-                          .setType(TypeSpecs.tuple(TypeSpecs.TINYINT, TypeSpecs.VARCHAR))
+                          .setType(TypeSpecs.VARCHAR)
                           .build(),
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("tx_id")
@@ -142,7 +142,7 @@ public class DeleteOperationTest extends AbstractValidatingStargateBridgeTest {
                   List.of(
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("key")
-                          .setType(TypeSpecs.tuple(TypeSpecs.TINYINT, TypeSpecs.VARCHAR))
+                          .setType(TypeSpecs.VARCHAR)
                           .build(),
                       QueryOuterClass.ColumnSpec.newBuilder()
                           .setName("tx_id")

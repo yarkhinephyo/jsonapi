@@ -171,7 +171,7 @@ public class CreateCollectionOperationTest extends AbstractValidatingStargateBri
     List<String> queries = new ArrayList<>();
     String createTable =
         "CREATE TABLE IF NOT EXISTS \"%s\".\"%s\" ("
-            + "    key                 tuple<tinyint,text>,"
+            + "    key                 text,"
             + "    tx_id               timeuuid, "
             + "    doc_json            text,"
             + "    exist_keys          set<text>,"
@@ -186,7 +186,7 @@ public class CreateCollectionOperationTest extends AbstractValidatingStargateBri
 
     String createTableWithVector =
         "CREATE TABLE IF NOT EXISTS \"%s\".\"%s\" ("
-            + "    key                 tuple<tinyint,text>,"
+            + "    key                 text,"
             + "    tx_id               timeuuid, "
             + "    doc_json            text,"
             + "    exist_keys          set<text>,"

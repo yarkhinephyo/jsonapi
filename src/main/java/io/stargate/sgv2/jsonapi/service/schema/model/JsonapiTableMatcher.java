@@ -16,7 +16,7 @@ public class JsonapiTableMatcher implements Predicate<Schema.CqlTable> {
   private final Predicate<QueryOuterClass.ColumnSpec> columnsPredicateVector;
 
   public JsonapiTableMatcher() {
-    primaryKeyPredicate = new CqlColumnMatcher.Tuple("key", Basic.TINYINT, Basic.VARCHAR);
+    primaryKeyPredicate = new CqlColumnMatcher.BasicType("key", Basic.VARCHAR);
     columnsPredicate =
         new CqlColumnMatcher.BasicType("tx_id", Basic.TIMEUUID)
             .or(new CqlColumnMatcher.BasicType("doc_json", Basic.VARCHAR))

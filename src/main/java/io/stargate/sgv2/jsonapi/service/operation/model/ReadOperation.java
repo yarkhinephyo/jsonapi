@@ -299,10 +299,8 @@ public interface ReadOperation extends Operation {
    * @return
    */
   default DocumentId getDocumentId(QueryOuterClass.Value value) {
-    QueryOuterClass.Collection coll = value.getCollection();
-    int typeId = Values.tinyint(coll.getElements(0));
-    String documentIdAsText = Values.string(coll.getElements(1));
-    return DocumentId.fromDatabase(typeId, documentIdAsText);
+    String documentIdAsText = value.getString();
+    return DocumentId.fromDatabase(1, documentIdAsText);
   }
 
   private String extractPagingStateFromResultSet(QueryOuterClass.ResultSet rSet) {
